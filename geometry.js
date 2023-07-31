@@ -96,9 +96,25 @@ clickCalc("Parallelogram","base","height");
 // function call for ellipse calculation 
 clickCalc("Ellipse","a","b");
 
+// function for changing shape box color 
+function changeBGC(elementId){
+    document
+      .getElementById(elementId)
+      .addEventListener("mouseover", function () {
+        document.getElementById(elementId).style.backgroundColor = "red";
+      });
 
-// bg change on hover on the shape box 
-const boxes=document.getElementsByClassName("shape");
-for(const box of boxes){
-    
+    document
+      .getElementById(elementId)
+      .addEventListener("mouseout", function () {
+        document.getElementById(elementId).style.backgroundColor = "white";
+      });
 }
+
+// function call for shape boxes color change on hover 
+changeBGC("triangle");
+changeBGC("rectangle");
+changeBGC("parallelogram");
+changeBGC("rhombus");
+changeBGC("pentagon");
+changeBGC("ellipse");
