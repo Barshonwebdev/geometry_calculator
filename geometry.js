@@ -97,9 +97,18 @@ clickCalc("Parallelogram", "base", "height");
 clickCalc("Ellipse", "a", "b");
 
 // function for changing shape box color
-function changeBGC(elementId) {
+/* function changeBGC(elementId) {
+    function getColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      console.log(color);
+      return color;
+    }
   document.getElementById(elementId).addEventListener("mouseover", function () {
-    document.getElementById(elementId).style.backgroundColor = "red";
+    document.getElementById(elementId).style.backgroundColor=getColor();
   });
 
   document.getElementById(elementId).addEventListener("mouseout", function () {
@@ -113,4 +122,4 @@ changeBGC("rectangle");
 changeBGC("parallelogram");
 changeBGC("rhombus");
 changeBGC("pentagon");
-changeBGC("ellipse");
+changeBGC("ellipse"); */
