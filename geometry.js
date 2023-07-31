@@ -17,11 +17,11 @@ function getValuesfromInput(input1Id,input2Id){
     const value1=getValue(input1Id);
     const value2=getValue(input2Id);
     if(isNaN(value1) || isNaN(value2)){
-        alert("Please enter both number");
+        alert("Please enter both as numbers");
         return;
     }
     else if(value1<0 || value2<0){
-        alert("please enter positive number");
+        alert("please enter positive numbers");
         return;
     }
     console.log(value1);
@@ -33,6 +33,11 @@ function clickCalc(buttonId,in1,in2){
 document.getElementById(buttonId).addEventListener("click",function(){
     getValuesfromInput(in1,in2);
 })
+}
+
+// set value function 
+function setValues(){
+
 }
 
 // function call for triangle calculation 
