@@ -37,3 +37,22 @@ document.getElementById(buttonId).addEventListener("click",function(){
 
 // function call for triangle calculation 
 clickCalc("triangle-calc","base-input","height-input");
+
+// shared function for formula application of area measurement of triangle, rhombus & pentagon 
+function areaFunctionOfTRP(param1,param2){
+    const area=0.5*param1*param2;
+    return area;
+}
+
+// shared function for formula application of area measurement of rectangle and parallelogram
+function areaFunctionOfPR(param1, param2) {
+  const area =  param1 * param2;
+  return area;
+}
+
+// function for ellipse area measurement 
+function areaFunctionOfEllipse(param1,param2){
+    const pi=3.1416;
+    const area=pi*param1*param2;
+    return area;
+}
