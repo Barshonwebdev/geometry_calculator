@@ -12,26 +12,33 @@ function getValue(inputId){
     return inputNumber;
 }
 
-// both input taking function 
-function getValuesfromInput(input1Id,input2Id){
+// both input taking function and multiplying them
+function getValuesfromInputandMultiply(input1Id,input2Id){
     const value1=getValue(input1Id);
     const value2=getValue(input2Id);
     if(isNaN(value1) || isNaN(value2)){
         alert("Please enter both as numbers");
-        return;
+        exit;
     }
     else if(value1<0 || value2<0){
         alert("please enter positive numbers");
-        return;
+        exit;
     }
-    console.log(value1);
-    console.log(value2);
+    const multiplied=(value1*value2).toFixed(2);
+    console.log(multiplied);
+    return multiplied;
 }
+
 
 // calculation button click event function 
 function clickCalc(buttonId,in1,in2){
 document.getElementById(buttonId).addEventListener("click",function(){
-    getValuesfromInput(in1,in2);
+    const multiplied=getValuesfromInputandMultiply(in1,in2);
+    const output=areaFunctionOfTRP(multiplied);
+    const newOutputElementplace=document.getElementById("calculation-section");
+    const newOutputElement=document.createElement("li");
+    newOutputElement.innerHTML = `${buttonId} <span class="mx-3">${output} cm<sup>2</sup></span> <button class="px-1 py-1 mt-5 rounded-xl w-1/4 bg-blue-500 text-white text-xs">Convert to m<sup>2</sup></button>`; 
+    newOutputElementplace.appendChild(newOutputElement);
 })
 }
 
@@ -41,11 +48,11 @@ function setValues(){
 }
 
 // function call for triangle calculation 
-clickCalc("triangle-calc","base-input","height-input");
+clickCalc("Triangle","base-input","height-input");
 
 // shared function for formula application of area measurement of triangle, rhombus & pentagon 
-function areaFunctionOfTRP(param1,param2){
-    const area=0.5*param1*param2;
+function areaFunctionOfTRP(param){
+    const area=0.5*param;
     return area;
 }
 
