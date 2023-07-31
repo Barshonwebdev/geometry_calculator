@@ -97,3 +97,8 @@ clickCalc("Parallelogram","base","height");
 clickCalc("Ellipse","a","b");
 
 
+// bg change on hover on the shape box 
+const boxes=document.getElementsByClassName("shape");
+for(const box of boxes){
+    
+}
