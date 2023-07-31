@@ -25,8 +25,9 @@ function getValuesfromInputandMultiply(input1Id, input2Id) {
     alert("please enter positive numbers");
     exit;
   }
-  const multiplied = (value1 * value2).toFixed(2);
-  return multiplied;
+  const multiplied = (value1 * value2);
+  const multipliedToFixedTwoDigits=multiplied.toFixed(2);
+  return multipliedToFixedTwoDigits;
 }
 
 // calculation button click event function
@@ -67,19 +68,20 @@ function clickCalc(buttonId, in1, in2) {
 
 // shared function for formula application of area measurement of triangle, rhombus & pentagon
 function areaFunctionOfTRP(param) {
-  const area = 0.5 * param;
+  const area = (0.5 * param).toFixed(2);
   return area;
 }
 
 // shared function for formula application of area measurement of rectangle and parallelogram
 function areaFunctionOfPR(param) {
-  return param;
+  const area=(param*1).toFixed(2);
+  return area;
 }
 
 // function for ellipse area measurement
 function areaFunctionOfEllipse(param) {
   const pi = 3.14;
-  const area = pi * param;
+  const area = (pi * param).toFixed(2);
   return area;
 }
 
