@@ -37,7 +37,7 @@ document.getElementById(buttonId).addEventListener("click",function(){
     const output=areaFunctionOfTRP(multiplied);
     const newOutputElementplace=document.getElementById("calculation-section");
     const newOutputElement=document.createElement("li");
-    newOutputElement.innerHTML = `${buttonId} <span class="mx-3">${output} cm<sup>2</sup></span> <button class="px-1 py-1 mt-5 rounded-xl w-1/4 bg-blue-500 text-white text-xs">Convert to m<sup>2</sup></button>`; 
+    newOutputElement.innerHTML = `${buttonId} <span class="mx-3">${output} cm<sup>2</sup></span> <!-- <button class="px-1 py-1 mt-5 rounded-xl w-1/4 bg-blue-500 text-white text-xs">Convert to m<sup>2</sup></button> -->`; 
     newOutputElementplace.appendChild(newOutputElement);
 })
 }
