@@ -3,7 +3,7 @@ document.getElementById("blog-button-section").addEventListener("click",function
     location.href="blog.html";
 })
 
-// single input taking funvtion 
+// single input taking function 
 function getValue(inputId){
     const inputElement=document.getElementById(inputId);
     const inputString=inputElement.value;
@@ -48,7 +48,11 @@ function setValues(){
 }
 
 // function call for triangle calculation 
-clickCalc("Triangle","base-input","height-input");
+clickCalc("Triangle","triangleBase-input","triangleHeight-input");
+// function call for rhombus calculation 
+clickCalc("Rhombus","rhombusD1","rhombusD2");
+// function call for pentagon calculation 
+clickCalc("Pentagon","pentagonP","pentagonB");
 
 // shared function for formula application of area measurement of triangle, rhombus & pentagon 
 function areaFunctionOfTRP(param){
